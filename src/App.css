@@ -2,6 +2,169 @@
   text-align: center;
 }
 
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+/* SideMenu.css */
+
+.open-menu-btn {
+  position: relative;
+  top: 10px;
+  left: 20px;
+  width:50px;
+  z-index: 1000;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden off screen initially */
+  width: 250px;
+  height: 100%;
+  background-color: #ADD8E6; /* Light blue background */
+  color: white;
+  opacity:70%;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 999;
+}
+
+.side-menu.open {
+  left: 0; /* Slide in */
+}
+
+.close-menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+nav ul li {
+  padding: 8px 16px;
+}
+
+nav ul li a {
+  color:darkblue;
+  text-decoration: none; /* Remove underline */
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #007B9E;
+}
+
+
+.content {
+  flex: 1;
+  padding: 20px;
+  /* margin-left: 0; Ensure it doesn't overlap with the sidebar */
+  /* transition: margin-left 0.3s; */
+}
+
+.open-btn, .close-btn {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.close-btn {
+  align-self: flex-end;
+}
+
+.sidebar.open + .content {
+  /* margin-left: 250px; Shift content when sidebar is open */
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.message-form {
+  display: flex;
+}
+
+.message-input {
+  flex: 1;
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.send-button {
+  padding: 8px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

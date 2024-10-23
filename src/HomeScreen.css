@@ -1,0 +1,24 @@
+/* HomeScreen.css */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-image:url("images/backdrop5.jpg")
+    
+  }
+  
+  .background-image {
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/backdrop5.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; Ensure the image is behind other content */
+  }
+  
